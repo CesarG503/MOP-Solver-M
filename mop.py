@@ -515,7 +515,7 @@ class GranMSimplexExtended:
         extended_matrix.append(z_row)
         
         # Nombres de variables
-        all_var_names = original_vars + slack_vars + surplus_vars + artificial_vars + ["RHS"]
+        all_var_names = original_vars + slack_vars + surplus_vars + artificial_vars + ["b(j)"]
         
         return extended_matrix, all_var_names, basis_vars
 

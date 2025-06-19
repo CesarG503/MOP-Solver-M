@@ -839,10 +839,15 @@ def test_extended():
     
     html_report = solver.solve(objetivo, restricciones, tipos, minimize=True)
     
-    with open("gran_m_completo.html", "w", encoding="utf-8") as f:
+    with open("minimizar.html", "w", encoding="utf-8") as f:
         f.write(html_report)
     
     print("✅ Reporte completo generado: gran_m_completo.html")
+
+    html_new = solver.solve([3,2], restricciones, tipos, minimize=False)
+
+    with open("maximizar.html", "w", encoding="utf-8") as f:
+        f.write(html_new)
     
     return html_report
 
